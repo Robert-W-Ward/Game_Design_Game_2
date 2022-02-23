@@ -1,0 +1,888 @@
+fileFormatVersion: 2
+guid: d49875ce718a10144a2f79c8ac2b75c7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8116669686113271603
+    second: Appocolypse_Tileset_0
+  - first:
+      213: -5368631469547728
+    second: Appocolypse_Tileset_1
+  - first:
+      213: -2731600080571428199
+    second: Appocolypse_Tileset_2
+  - first:
+      213: -7370939230342793529
+    second: Appocolypse_Tileset_3
+  - first:
+      213: 6539612637645406807
+    second: Appocolypse_Tileset_4
+  - first:
+      213: -8415764707870273090
+    second: Appocolypse_Tileset_5
+  - first:
+      213: -4077456055244606619
+    second: Appocolypse_Tileset_6
+  - first:
+      213: -4853517113037767286
+    second: Appocolypse_Tileset_7
+  - first:
+      213: 6182032479985464217
+    second: Appocolypse_Tileset_8
+  - first:
+      213: 5119786977409223834
+    second: Appocolypse_Tileset_9
+  - first:
+      213: 4531737356086751915
+    second: Appocolypse_Tileset_10
+  - first:
+      213: -1303475016614282474
+    second: Appocolypse_Tileset_11
+  - first:
+      213: 5902784812455147338
+    second: Appocolypse_Tileset_12
+  - first:
+      213: -2233956792667434504
+    second: Appocolypse_Tileset_13
+  - first:
+      213: 5613871263164927387
+    second: Appocolypse_Tileset_14
+  - first:
+      213: 2336089216758123776
+    second: Appocolypse_Tileset_15
+  - first:
+      213: 1607403293721452535
+    second: Appocolypse_Tileset_16
+  - first:
+      213: -1851607437450781541
+    second: Appocolypse_Tileset_17
+  - first:
+      213: 5394325120741125217
+    second: Appocolypse_Tileset_18
+  - first:
+      213: -7037389990750948565
+    second: Appocolypse_Tileset_19
+  - first:
+      213: 7414623409823322401
+    second: Appocolypse_Tileset_20
+  - first:
+      213: 1130308102357313570
+    second: Appocolypse_Tileset_21
+  - first:
+      213: -8082356149800474437
+    second: Appocolypse_Tileset_22
+  - first:
+      213: 8496878070422091890
+    second: Appocolypse_Tileset_23
+  - first:
+      213: -1827475333160272030
+    second: Appocolypse_Tileset_24
+  - first:
+      213: 6790671531179251644
+    second: Appocolypse_Tileset_25
+  - first:
+      213: -8763618955961424132
+    second: Appocolypse_Tileset_26
+  - first:
+      213: 1022923740558445708
+    second: Appocolypse_Tileset_27
+  - first:
+      213: -6913500313216672500
+    second: Appocolypse_Tileset_28
+  - first:
+      213: -6622246715982062361
+    second: Appocolypse_Tileset_29
+  - first:
+      213: -6155368821618418792
+    second: Appocolypse_Tileset_30
+  - first:
+      213: 4962434811366633158
+    second: Appocolypse_Tileset_31
+  - first:
+      213: -3781200044640156681
+    second: Appocolypse_Tileset_32
+  - first:
+      213: 7563303794201370959
+    second: Appocolypse_Tileset_33
+  - first:
+      213: -2915048758427516079
+    second: Appocolypse_Tileset_34
+  - first:
+      213: 3879827224462011982
+    second: Appocolypse_Tileset_35
+  - first:
+      213: 3433495759648066681
+    second: Appocolypse_Tileset_36
+  - first:
+      213: 4575962754955977356
+    second: Appocolypse_Tileset_37
+  - first:
+      213: 5443070312787090829
+    second: Appocolypse_Tileset_38
+  - first:
+      213: -5159073856367123890
+    second: Appocolypse_Tileset_39
+  - first:
+      213: -1117987539404014980
+    second: Appocolypse_Tileset_40
+  - first:
+      213: 4690070758782539526
+    second: Appocolypse_Tileset_41
+  - first:
+      213: 6238663350537060074
+    second: Appocolypse_Tileset_42
+  - first:
+      213: -1607360137023855735
+    second: Appocolypse_Tileset_43
+  - first:
+      213: 2864463736584807217
+    second: Appocolypse_Tileset_44
+  - first:
+      213: -2890973963723436926
+    second: Appocolypse_Tileset_45
+  - first:
+      213: 6307417585628851448
+    second: Appocolypse_Tileset_46
+  - first:
+      213: 8085508903572512827
+    second: Appocolypse_Tileset_47
+  - first:
+      213: -1664908570213863291
+    second: Appocolypse_Tileset_48
+  - first:
+      213: 6803021553561806534
+    second: Appocolypse_Tileset_49
+  - first:
+      213: 3374059737127672055
+    second: Appocolypse_Tileset_50
+  - first:
+      213: -1845072141431231292
+    second: Appocolypse_Tileset_51
+  - first:
+      213: 491504593333021278
+    second: Appocolypse_Tileset_52
+  - first:
+      213: 1794488703884317121
+    second: Appocolypse_Tileset_53
+  - first:
+      213: 2465005391257626724
+    second: Appocolypse_Tileset_54
+  - first:
+      213: -4052885741723763657
+    second: Appocolypse_Tileset_55
+  - first:
+      213: 8998777520968539633
+    second: Appocolypse_Tileset_56
+  - first:
+      213: -1573032164830167269
+    second: Appocolypse_Tileset_57
+  - first:
+      213: -4527850864420148313
+    second: Appocolypse_Tileset_58
+  - first:
+      213: -6758461768128439529
+    second: Appocolypse_Tileset_59
+  - first:
+      213: -3593108495338500937
+    second: Appocolypse_Tileset_60
+  - first:
+      213: -2334857503365463945
+    second: Appocolypse_Tileset_61
+  - first:
+      213: -2355822771906389387
+    second: Appocolypse_Tileset_62
+  - first:
+      213: 9158229707553120714
+    second: Appocolypse_Tileset_63
+  - first:
+      213: -2367195031667004546
+    second: Appocolypse_Tileset_64
+  - first:
+      213: 2349881378793769029
+    second: Appocolypse_Tileset_65
+  - first:
+      213: 5978956291650735092
+    second: Appocolypse_Tileset_66
+  - first:
+      213: -6187785456252000065
+    second: Appocolypse_Tileset_67
+  - first:
+      213: 3977340500029647446
+    second: Appocolypse_Tileset_68
+  - first:
+      213: -8265406304976919028
+    second: Appocolypse_Tileset_69
+  - first:
+      213: -8696225574693359354
+    second: Appocolypse_Tileset_70
+  - first:
+      213: -7906621142046471529
+    second: Appocolypse_Tileset_71
+  - first:
+      213: 4087033986229887003
+    second: Appocolypse_Tileset_72
+  - first:
+      213: -7051259253062648441
+    second: Appocolypse_Tileset_73
+  - first:
+      213: 919210825226611941
+    second: Appocolypse_Tileset_74
+  - first:
+      213: 2231066541928097268
+    second: Appocolypse_Tileset_75
+  - first:
+      213: 7113317756434697978
+    second: Appocolypse_Tileset_76
+  - first:
+      213: -8936787583416727774
+    second: Appocolypse_Tileset_77
+  - first:
+      213: 9133636342229976465
+    second: Appocolypse_Tileset_78
+  - first:
+      213: 4247690936615820205
+    second: Appocolypse_Tileset_79
+  - first:
+      213: 2652759167232428876
+    second: Appocolypse_Tileset_80
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f76f7531434a070800000000000000
+      internalID: 8116669686113271603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03fd354124deceff0800000000000000
+      internalID: -5368631469547728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9929c190338671ad0800000000000000
+      internalID: -2731600080571428199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c63d6aa2d925b990800000000000000
+      internalID: -7370939230342793529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752828bab0f51ca50800000000000000
+      internalID: 6539612637645406807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb19f1a3692353b80800000000000000
+      internalID: -8415764707870273090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_6
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56331ef2257f967c0800000000000000
+      internalID: -4077456055244606619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_7
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8dba1696e7d4acb0800000000000000
+      internalID: -4853517113037767286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_8
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993f57769cdfac550800000000000000
+      internalID: 6182032479985464217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9cc52251232d0740800000000000000
+      internalID: 5119786977409223834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba23bec7d17f3ee30800000000000000
+      internalID: 4531737356086751915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_11
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61bfb15e06029ede0800000000000000
+      internalID: -1303475016614282474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47b5fb3387eae150800000000000000
+      internalID: 5902784812455147338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_13
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f19c7112246ff0e0800000000000000
+      internalID: -2233956792667434504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d08b79b2a78ed40800000000000000
+      internalID: 5613871263164927387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d0d78f3c47b6020800000000000000
+      internalID: 2336089216758123776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_16
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff5f0d77c4ae4610800000000000000
+      internalID: 1607403293721452535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_17
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9c564b88d4cd46e0800000000000000
+      internalID: -1851607437450781541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_18
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16cadb0fd1e7cda40800000000000000
+      internalID: 5394325120741125217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23766fc61b265e90800000000000000
+      internalID: -7037389990750948565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12190d5f4b806e660800000000000000
+      internalID: 7414623409823322401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_21
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228e0cffa39afaf00800000000000000
+      internalID: 1130308102357313570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_22
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8e2f667e3b5df80800000000000000
+      internalID: -8082356149800474437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_23
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278b05f2699fae570800000000000000
+      internalID: 8496878070422091890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appocolypse_Tileset_24
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f713bedd083a6e0800000000000000
+      internalID: -1827475333160272030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
