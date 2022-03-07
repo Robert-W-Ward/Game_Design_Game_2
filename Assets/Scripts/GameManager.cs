@@ -6,19 +6,59 @@ public class GameManager : MonoBehaviour
 {
 
     [SerializeField] private PlayerInputManager PM;
-    private PlayerInput p1, p2, p3, p4;
-    void getPlayers()
+    [SerializeField] private GameObject[] ScoreObjects = new GameObject[3];
+    public enum ScoreObjectNames { BOOK,WATER,APPLE};
+    int TotalScoreObjects =0;
+    static int MaxScoreObjects = 15;
+    private Vector2[] Spawnlocations = new Vector2[MaxScoreObjects];
+    private PlayerInput pi;
+
+    //gets the players that are currently in game and assigns them player numbers
+    // to be used later have UI elements show which player is which
+    void GetPlayers()
     {
         PM.DisableJoining();
-        Debug.Log("test");
-        p1 = PlayerInput.GetPlayerByIndex(0);
-        p1.name = "Player1";
-        p2 = PlayerInput.GetPlayerByIndex(1);
-        p2.name = "Player2";
-        p3 = PlayerInput.GetPlayerByIndex(2);
-        p3.name = "Player3";
-        p4 = PlayerInput.GetPlayerByIndex(3);
-        p4.name= "Player4";
+        for(int i = 0; i < PlayerInput.all.Count; i++)
+        {
+            pi =PlayerInput.GetPlayerByIndex(i);
+            pi.name = "Player" + i+1;
+        }
+    }
+    
+    IEnumerator SpawnScoreObjects()
+    {
+        while (TotalScoreObjects < MaxScoreObjects)
+        {
+            GameObject ObjToSpawn;
+            int tmp = Random.RandomRange(0, 99);
+            if (tmp <= 25)
+            {
+                ObjToSpawn = ScoreObjects[(int)ScoreObjectNames.BOOK];
+            }else if (tmp > 25 && tmp <= 75)
+            {
+                ObjToSpawn = ScoreObjects[((int)ScoreObjectNames.APPLE)];
+            }
+            else
+            {
+                ObjToSpawn = ScoreObjects[(int) ScoreObjectNames.WATER];
+            }
+
+
+            Vector2 LocationTospawn = new Vector2(Random.Range(-16.6f, 17.6f), Random.Range(-11.5f, 11.6f));
+            for(int i = 0; i < Spawnlocations.Length; ++i)
+            {
+                if (LocationTospawn != Spawnlocations[i])
+                {
+                    Spawnlocations[i] = LocationTospawn;
+                    Instantiate(ObjToSpawn, LocationTospawn, Quaternion.identity);
+                    TotalScoreObjects++;
+                    break;
+                }
+                else continue;
+                
+            }
+            yield return new WaitForSeconds(3f);
+        }
     }
     private void Awake()
     {
@@ -27,12 +67,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("getPlayers", 5);
+        Invoke("GetPlayers", 5);
+        StartCoroutine(SpawnScoreObjects());
+
     }
-    
+
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

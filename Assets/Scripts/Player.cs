@@ -8,10 +8,18 @@ public class Player : MonoBehaviour
     
     private Vector2 movementInput;
     [SerializeField] private float speed = 5;
-   
+    [SerializeField] private SpriteRenderer spriteRenderer;
     public void OnMove(InputAction.CallbackContext context)
     {
         movementInput = context.ReadValue<Vector2>();
+        if(movementInput.x <0)
+        {
+            spriteRenderer.flipX =true; 
+        }
+        else if(movementInput.x > 0)
+        {
+            spriteRenderer.flipX=false;
+        }
     }
     
 
@@ -22,15 +30,7 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
         }
     }    
-    public void OnDropIn(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            
-            gameObject.SetActive(true); 
-        }
-    }
-    
+   
     void Update()
     {
         transform.Translate(speed * Time.deltaTime * new Vector2(movementInput.x, movementInput.y));
@@ -38,8 +38,8 @@ public class Player : MonoBehaviour
         {
 
             Vector2 tmpPos = transform.position;
-            tmpPos.x = Mathf.Clamp(transform.position.x, -5, 5);
-            tmpPos.y = Mathf.Clamp(transform.position.y, -5, 5);
+            tmpPos.x = Mathf.Clamp(transform.position.x, -16.6f, 17.6f);
+            tmpPos.y = Mathf.Clamp(transform.position.y, -11.5f, 11.6f);
             transform.position = tmpPos;
         }
         

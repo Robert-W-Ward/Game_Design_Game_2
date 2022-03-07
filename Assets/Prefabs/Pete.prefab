@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3133139347066315250}
   - component: {fileID: 293620430815045371}
   - component: {fileID: 963339452934335731}
+  - component: {fileID: 1500242439539793926}
+  - component: {fileID: -2226661628701370668}
   m_Layer: 6
   m_Name: Pete
   m_TagString: Player
@@ -72,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -495272947
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 5517306432922435798, guid: fb58afe4dc106504e87177a2c1a50787, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5.69
+  spriteRenderer: {fileID: 3133139347066315250}
 --- !u!114 &963339452934335731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,12 +173,45 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ea6e3173-ea40-475b-86ee-9f1717bbec41
     m_ActionName: Player/DropIn[/XInputControllerWindows2/start]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 016e022c-5db3-4912-bf91-14c33b0ecacc
-    m_ActionName: Debug/FindPlayers
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!58 &1500242439539793926
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3133139347066315249}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.75
+--- !u!50 &-2226661628701370668
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3133139347066315249}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
