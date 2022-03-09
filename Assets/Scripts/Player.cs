@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private Vector2 movementInput;
     [SerializeField] private float speed = 5;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    public bool PlayerReady = false;
     public void OnMove(InputAction.CallbackContext context)
     {
         movementInput = context.ReadValue<Vector2>();
@@ -21,7 +22,10 @@ public class Player : MonoBehaviour
             spriteRenderer.flipX=false;
         }
     }
-    
+    public void OnReady(InputAction.CallbackContext context)
+    {
+        PlayerReady = true;
+    }
 
     public void OnDropOut(InputAction.CallbackContext context)
     {
