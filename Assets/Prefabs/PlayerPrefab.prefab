@@ -49,6 +49,11 @@ MonoBehaviour:
   speed: 5
   spriteRenderer: {fileID: 0}
   character: 
+  PowerUpStorage: []
+  score: 0
+  PlayerReady: 0
+  multiplier: 0
+  invenidx: 0
 --- !u!114 &963339452934335731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,10 +112,22 @@ MonoBehaviour:
     m_ActionId: 94db2fc2-f26d-4397-b7ab-63bbcd438697
     m_ActionName: Player/DropOut[/XInputControllerWindows2/start]
   - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ea6e3173-ea40-475b-86ee-9f1717bbec41
+    m_ActionName: Player/DropIn[/XInputControllerWindows2/start]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e6b71d5a-74ef-4868-9ec7-9e96603c141c
+    m_ActionName: Player/UsePowerUp[/XInputControllerWindows/leftShoulder,/XInputControllerWindows/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 15c6e39a-ddd1-4642-9b0a-7ae155dc5f40
+    m_ActionName: Player/ChangePowerUp[/XInputControllerWindows/dpad/left]
+  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 293620430815045371}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: OnDropIn
+        m_MethodName: OnReady
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -120,8 +137,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: ea6e3173-ea40-475b-86ee-9f1717bbec41
-    m_ActionName: Player/DropIn[/XInputControllerWindows2/start]
+    m_ActionId: 817f793e-e536-4070-a068-a979c7a698c8
+    m_ActionName: Player/New action
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player

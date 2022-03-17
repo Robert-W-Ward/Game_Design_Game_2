@@ -16,97 +16,104 @@ public class GameManager : MonoBehaviour
     static int MaxPowerUps = 5;
     private Vector2[] Spawnlocations = new Vector2[MaxScoreObjects + MaxPowerUps];
     private PlayerInput pi;
-
+    private GameObject[] PlayerObjects = new GameObject[4];
+    private Player[] PlayerScripts = new Player[4];
+    [SerializeField]private bool PlayersReady = false;
+    private bool GameStarted = false;
     //gets the players that are currently in game and assigns them player numbers
     // to be used later have UI elements show which player is which
     void GetPlayers()
     {
-        PM.DisableJoining();
+        
+        PlayerObjects = GameObject.FindGameObjectsWithTag("Player");
         for (int i = 0; i < PlayerInput.all.Count; i++)
         {
             pi = PlayerInput.GetPlayerByIndex(i);
-            pi.name = "Player" + i + 1;
+            pi.name = "Player" + (i + 1);
+            PlayerScripts[i] = PlayerObjects[i].GetComponent<Player>();
         }
     }
+    
+
 
     IEnumerator SpawnScoreObjects()
-    {
-        while (TotalScoreObjects < MaxScoreObjects)
         {
-            GameObject ObjToSpawn;
-            int tmp = Random.Range(0, 99);
-            if (tmp <= 25)
+            while (TotalScoreObjects < MaxScoreObjects)
             {
-                ObjToSpawn = ScoreObjects[(int)ScoreObjectNames.BOOK];
-            }
-            else if (tmp > 25 && tmp <= 75)
-            {
-                ObjToSpawn = ScoreObjects[((int)ScoreObjectNames.APPLE)];
-            }
-            else
-            {
-                ObjToSpawn = ScoreObjects[(int)ScoreObjectNames.WATER];
-            }
-
-
-            Vector2 LocationTospawn = new Vector2(Random.Range(-16.6f, 17.6f), Random.Range(-11.5f, 11.6f));
-            for (int i = 0; i < Spawnlocations.Length; ++i)
-            {
-                if (LocationTospawn != Spawnlocations[i])
+                GameObject ObjToSpawn;
+                int tmp = Random.Range(0, 99);
+                if (tmp <= 25)
                 {
-                    Spawnlocations[i] = LocationTospawn;
-                    Instantiate(ObjToSpawn, LocationTospawn, Quaternion.identity);
-                    TotalScoreObjects++;
-                    break;
+                    ObjToSpawn = ScoreObjects[(int)ScoreObjectNames.BOOK];
                 }
-                else continue;
+                else if (tmp > 25 && tmp <= 75)
+                {
+                    ObjToSpawn = ScoreObjects[((int)ScoreObjectNames.APPLE)];
+                }
+                else
+                {
+                    ObjToSpawn = ScoreObjects[(int)ScoreObjectNames.WATER];
+                }
 
+
+                Vector2 LocationTospawn = new Vector2(Random.Range(-16.6f, 17.6f), Random.Range(-11.5f, 11.6f));
+                for (int i = 0; i < Spawnlocations.Length; ++i)
+                {
+                    if (LocationTospawn != Spawnlocations[i])
+                    {
+                        Spawnlocations[i] = LocationTospawn;
+                        Instantiate(ObjToSpawn, LocationTospawn, Quaternion.identity);
+                        TotalScoreObjects++;
+                        break;
+                    }
+                    else continue;
+
+                }
+                yield return new WaitForSeconds(3f);
             }
-            yield return new WaitForSeconds(3f);
         }
-    }
 
     IEnumerator SpawnPowerUps()
-    {
-        yield return new WaitForSeconds(10f);
-        while (TotalPowerUps < MaxPowerUps)
         {
+            yield return new WaitForSeconds(10f);
+            while (TotalPowerUps < MaxPowerUps)
+            {
 
-            GameObject PowerUpToSpawn;
-            int tmp = Random.Range(0, 99);
-            if (tmp <= 25)
-            {
-                PowerUpToSpawn = PowerUps[(int)PowerUpNames.BALL];
-            }
-            else if (tmp > 25 && tmp <= 75)
-            {
-                PowerUpToSpawn = PowerUps[(int)PowerUpNames.SPEED_BOOST];
-            }
-            else
-            {
-                PowerUpToSpawn = PowerUps[(int)PowerUpNames.RESISTANCE];
-            }
-            Vector2 LocationTospawn = new Vector2(Random.Range(-16.6f, 17.6f), Random.Range(-11.5f, 11.6f));
-            for (int i = 0; i < Spawnlocations.Length; ++i)
-            {
-                if (LocationTospawn != Spawnlocations[i])
+                GameObject PowerUpToSpawn;
+                int tmp = Random.Range(0, 99);
+                if (tmp <= 25)
                 {
-                    Spawnlocations[i] = LocationTospawn;
-                    Instantiate(PowerUpToSpawn, LocationTospawn, Quaternion.identity);
-                    TotalPowerUps++;
-                    break;
+                    PowerUpToSpawn = PowerUps[(int)PowerUpNames.BALL];
                 }
-                else continue;
+                else if (tmp > 25 && tmp <= 75)
+                {
+                    PowerUpToSpawn = PowerUps[(int)PowerUpNames.SPEED_BOOST];
+                }
+                else
+                {
+                    PowerUpToSpawn = PowerUps[(int)PowerUpNames.RESISTANCE];
+                }
+                Vector2 LocationTospawn = new Vector2(Random.Range(-16.6f, 17.6f), Random.Range(-11.5f, 11.6f));
+                for (int i = 0; i < Spawnlocations.Length; ++i)
+                {
+                    if (LocationTospawn != Spawnlocations[i])
+                    {
+                        Spawnlocations[i] = LocationTospawn;
+                        Instantiate(PowerUpToSpawn, LocationTospawn, Quaternion.identity);
+                        TotalPowerUps++;
+                        break;
+                    }
+                    else continue;
 
+                }
+                break;
             }
-            break;
+            yield return new WaitForSeconds(15f);
         }
-        yield return new WaitForSeconds(15f);
-    }
     IEnumerator GlobalTimer()
-    {
-        yield return new WaitForSeconds(1f);
-    }
+        {
+            yield return new WaitForSeconds(1f);
+        }
 
     public void RemoveScoreObj(GameObject obj)
     {
@@ -130,14 +137,60 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    private void Start()
+    void Start()
     {
-        //Invoke("GetPlayers", 5);
-        StartCoroutine(SpawnScoreObjects());
-        StartCoroutine(SpawnPowerUps());
-    }
-}
+        
        
         
 
-   
+    }
+    void Update()
+    {
+        GetPlayers();
+        switch (PlayerInput.all.Count)
+        {
+            case 0:
+               
+                break;
+            case 1:
+                Debug.LogError("Not enough players to continue");
+                break;
+            case 2:
+                if (PlayerScripts[0].PlayerReady == true && PlayerScripts[1].PlayerReady == true)
+                {
+                    PlayersReady = true;
+                    
+                }
+                break;
+            case 3:
+                if (PlayerScripts[0].PlayerReady == true && PlayerScripts[1].PlayerReady == true && PlayerScripts[2].PlayerReady == true)
+                {
+                    PlayersReady = true;
+                }
+                break;
+            case 4:
+                if (PlayerScripts[0].PlayerReady == true && PlayerScripts[1].PlayerReady == true && PlayerScripts[2].PlayerReady == true && PlayerScripts[3].PlayerReady == true)
+                {
+                    PlayersReady = true;
+                    
+                }
+                break;
+            default:
+                Debug.LogError("Too many players something is wrong!");
+                
+                break;
+
+        }
+        if (PlayersReady == true && GameStarted == false)
+        {
+            PM.DisableJoining();
+            StartCoroutine(SpawnScoreObjects());
+            StartCoroutine(SpawnPowerUps());
+            GameStarted = true;
+        }
+    }
+
+}
+
+
+

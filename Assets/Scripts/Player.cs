@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     [SerializeField] public string character;
     [SerializeField] private string[] PowerUpStorage;
     [SerializeField] public float score;
+    public bool PlayerReady = false;
+    public float multiplier = 1;
+
     public int invenidx ;
     private void Awake()
     {
@@ -19,14 +22,18 @@ public class Player : MonoBehaviour
         if(character == "Pete")
         {
             speed = 6.5f;
+            PowerUpStorage = new string[2];
         }
         else if(character == "Shelby")
         {
+            speed = 5;
             PowerUpStorage = new string[3];
         }
-        else
+        else if(character == "Mary")
         {
+            speed = 3.75f;
             PowerUpStorage = new string[2];
+            multiplier = 1.5f;
         }
         
     }
@@ -50,8 +57,12 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }    
-   
+    }
+    public void OnReady(InputAction.CallbackContext context)
+    {
+        PlayerReady = !PlayerReady;
+    }
+
     void Update()
     {
         transform.Translate(speed * Time.deltaTime * new Vector2(movementInput.x, movementInput.y));

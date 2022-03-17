@@ -7,14 +7,15 @@ public class ScoreObject : MonoBehaviour
 
     private Collider2D collider;
     private float timeremaining = 5;
+
     private GameManager gamemanager;
     [SerializeField] string ScoreObjName;
     Player p;
     // Start is called before the first frame update
     private void Awake()
     {
-        
-        gamemanager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+
+       gamemanager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
     void Start()
     {
@@ -45,17 +46,20 @@ public class ScoreObject : MonoBehaviour
                 Debug.Log("Collected" + this.gameObject.name);
                 gamemanager.RemoveScoreObj(this.gameObject);
                 p = other.gameObject.GetComponentInParent<Player>();
+                
                 if(this.ScoreObjName == "Book")
                 {
-                    p.score += 10;
+                    p.score += Mathf.Round(10*p.multiplier);
                 }else if(this.ScoreObjName == "Apple")
                 {
-                    p.score += 25;
+                    p.score += Mathf.Round(25*p.multiplier);
                 }
                 else
                 {
-                    p.score += 50;
+                    p.score += Mathf.Round(50*p.multiplier);
                 }
+
+                
                 Destroy(this.gameObject);
             }
         }
