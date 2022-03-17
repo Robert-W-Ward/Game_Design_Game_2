@@ -7,18 +7,21 @@ public class ScoreObject : MonoBehaviour
 
     private Collider2D collider;
     private float timeremaining = 5;
-
+    private GameManager gamemanager;
+    [SerializeField] string ScoreObjName;
+    Player p;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        
+        gamemanager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+    }
     void Start()
     {
         collider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-       
-    }
     IEnumerator CollectItem()
     {
         Debug.Log("Collecting:" + this.gameObject.name);
@@ -29,7 +32,9 @@ public class ScoreObject : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if(timeremaining > 0)
+
+           
+            if (timeremaining > 0)
             {
                 Debug.Log("Collecting"+this.gameObject.name+" Time Remaining:"+timeremaining);
 
@@ -38,6 +43,19 @@ public class ScoreObject : MonoBehaviour
             else
             {
                 Debug.Log("Collected" + this.gameObject.name);
+                gamemanager.RemoveScoreObj(this.gameObject);
+                p = other.gameObject.GetComponentInParent<Player>();
+                if(this.ScoreObjName == "Book")
+                {
+                    p.score += 10;
+                }else if(this.ScoreObjName == "Apple")
+                {
+                    p.score += 25;
+                }
+                else
+                {
+                    p.score += 50;
+                }
                 Destroy(this.gameObject);
             }
         }
@@ -46,9 +64,27 @@ public class ScoreObject : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+
         if(collision.gameObject.tag == "Player")
+        {                  
+            
+                timeremaining = 5;
+            
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
         {
-            timeremaining = 5;
+            p = collision.gameObject.GetComponent<Player>();
+            if (p.character == "Jeff")
+            {
+                timeremaining = 3;
+            }
+            else
+            {
+                timeremaining = 5;
+            }
         }
     }
 }

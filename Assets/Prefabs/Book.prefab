@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -125037694453667235, guid: cd54208962175fd42945032ccf495393, type: 3}
+      propertyPath: ScoreObjName
+      value: Book
+      objectReference: {fileID: 0}
     - target: {fileID: 2275630335876576735, guid: cd54208962175fd42945032ccf495393, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -54,6 +58,10 @@ PrefabInstance:
     - target: {fileID: 4179904356790770844, guid: cd54208962175fd42945032ccf495393, type: 3}
       propertyPath: m_Name
       value: Book
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179904356790770844, guid: cd54208962175fd42945032ccf495393, type: 3}
+      propertyPath: m_TagString
+      value: ScoreObject
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd54208962175fd42945032ccf495393, type: 3}

@@ -7,8 +7,29 @@ public class Player : MonoBehaviour
 {   
     
     private Vector2 movementInput;
-    [SerializeField] private float speed = 5;
+    [SerializeField] public float speed = 5;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] public string character;
+    [SerializeField] private string[] PowerUpStorage;
+    [SerializeField] public float score;
+    public int invenidx ;
+    private void Awake()
+    {
+        invenidx = 0;
+        if(character == "Pete")
+        {
+            speed = 6.5f;
+        }
+        else if(character == "Shelby")
+        {
+            PowerUpStorage = new string[3];
+        }
+        else
+        {
+            PowerUpStorage = new string[2];
+        }
+        
+    }
     public void OnMove(InputAction.CallbackContext context)
     {
         movementInput = context.ReadValue<Vector2>();
@@ -43,6 +64,11 @@ public class Player : MonoBehaviour
             transform.position = tmpPos;
         }
         
+        
        
+    }
+    public string[] GetPlayerPowerUps()
+    {
+        return PowerUpStorage;
     }
 }
