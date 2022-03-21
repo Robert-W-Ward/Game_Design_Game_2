@@ -7,7 +7,7 @@ public class ScoreObject : MonoBehaviour
 
     private Collider2D collider;
     private float timeremaining = 5;
-
+    private Animator animator;
     private GameManager gamemanager;
     [SerializeField] string ScoreObjName;
     Player p;
@@ -16,17 +16,12 @@ public class ScoreObject : MonoBehaviour
     {
 
        gamemanager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+       animator = gameObject.GetComponent<Animator>();
+       
     }
     void Start()
     {
         collider = GetComponent<Collider2D>();
-    }
-
-    // Update is called once per frame
-    IEnumerator CollectItem()
-    {
-        Debug.Log("Collecting:" + this.gameObject.name);
-        yield return new WaitForSeconds(3);
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -36,14 +31,13 @@ public class ScoreObject : MonoBehaviour
 
            
             if (timeremaining > 0)
-            {
-                Debug.Log("Collecting"+this.gameObject.name+" Time Remaining:"+timeremaining);
+            {             
 
                 timeremaining -= Time.deltaTime;
+                animator.speed = (2/timeremaining);
             }
             else
-            {
-                Debug.Log("Collected" + this.gameObject.name);
+            {          
                 gamemanager.RemoveScoreObj(this.gameObject);
                 p = other.gameObject.GetComponentInParent<Player>();
                 
@@ -57,8 +51,7 @@ public class ScoreObject : MonoBehaviour
                 else
                 {
                     p.score += Mathf.Round(50*p.multiplier);
-                }
-
+                }             
                 
                 Destroy(this.gameObject);
             }
@@ -72,8 +65,9 @@ public class ScoreObject : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {                  
             
-                timeremaining = 5;
-            
+            timeremaining = 5;
+            animator.speed = 1;
+
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

@@ -8,6 +8,7 @@ TagManager:
   - ScoreObject
   - PowerUp
   - GameManager
+  - AimArrow
   layers:
   - Default
   - TransparentFX
@@ -50,4 +51,7 @@ TagManager:
     locked: 0
   - name: entities
     uniqueID: 3799694349
+    locked: 0
+  - name: UI
+    uniqueID: 1513146067
     locked: 0

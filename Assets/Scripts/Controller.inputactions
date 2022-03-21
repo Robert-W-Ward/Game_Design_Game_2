@@ -24,15 +24,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "DropIn",
-                    "type": "Button",
-                    "id": "ea6e3173-ea40-475b-86ee-9f1717bbec41",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "UsePowerUp",
                     "type": "Button",
                     "id": "e6b71d5a-74ef-4868-9ec7-9e96603c141c",
@@ -42,18 +33,45 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ChangePowerUp",
+                    "name": "ReadyUp",
                     "type": "Button",
-                    "id": "15c6e39a-ddd1-4642-9b0a-7ae155dc5f40",
+                    "id": "817f793e-e536-4070-a068-a979c7a698c8",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ReadyUp",
+                    "name": "NextPowerUp",
                     "type": "Button",
-                    "id": "817f793e-e536-4070-a068-a979c7a698c8",
+                    "id": "badad84b-d0ec-4703-a7ad-66f1530a26e1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PrevPowerUp",
+                    "type": "Button",
+                    "id": "034ef97b-43c3-408b-a3fa-65e254334baa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Aim",
+                    "type": "Value",
+                    "id": "296a94b6-8314-4287-98ef-1a1df43c699e",
+                    "expectedControlType": "Stick",
+                    "processors": "StickDeadzone",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Restart",
+                    "type": "Button",
+                    "id": "95a22a00-c6cb-4702-9e38-01a9a5e40524",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -85,17 +103,6 @@
                 },
                 {
                     "name": "",
-                    "id": "a554f4ae-31c6-47b6-bc60-27e3fb389b8d",
-                    "path": "<Gamepad>/start",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "DropIn",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "15eae5b6-6a64-475b-9b44-6a1a4534add2",
                     "path": "<XInputController>/leftShoulder",
                     "interactions": "",
@@ -117,39 +124,6 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "1D Axis",
-                    "id": "faab51c2-8479-406a-a6bd-35769dfe6ac8",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangePowerUp",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "29add4f6-fb83-4a6d-a084-3c4a36f0cdc9",
-                    "path": "<Gamepad>/dpad/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "ChangePowerUp",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "1929f21b-8707-40c0-8b7c-b5492f88c289",
-                    "path": "<Gamepad>/dpad/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "ChangePowerUp",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "",
                     "id": "b095526b-a058-4eb3-a9f1-2cb7485e3ec5",
                     "path": "<Gamepad>/select",
@@ -157,6 +131,50 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "ReadyUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "945b47f0-f3ed-417f-bc71-5dc7bf80a082",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "NextPowerUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8f599dc1-c569-460a-8033-7df55aa1b092",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "PrevPowerUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "98699b10-256e-45da-8e44-ac15babe8c6f",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d41132da-9697-4c0f-badc-6c3358c3e74e",
+                    "path": "<XInputController>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Restart",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

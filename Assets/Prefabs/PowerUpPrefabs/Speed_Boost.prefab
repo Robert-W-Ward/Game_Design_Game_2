@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -256109423120901360, guid: e22acd4c1592da34c8af7b52e8e21867, type: 3}
+      propertyPath: gamemanger
+      value: 
+      objectReference: {fileID: 6619036886140752361, guid: f4701464fc3c341418df0a07eb6444f1, type: 3}
+    - target: {fileID: -256109423120901360, guid: e22acd4c1592da34c8af7b52e8e21867, type: 3}
       propertyPath: PowerUpName
       value: Speed_Boost
       objectReference: {fileID: 0}

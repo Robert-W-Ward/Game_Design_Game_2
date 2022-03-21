@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4212391009169878062}
   - component: {fileID: 4887955074378513869}
   - component: {fileID: -256109423120901360}
+  - component: {fileID: 1873597333}
   m_Layer: 7
   m_Name: PowerUpPrefab
-  m_TagString: Untagged
+  m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +84,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PowerUpName: 
+--- !u!95 &1873597333
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8466361336887508304}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e318b27c61df1a4da40cc3a08a94649, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
