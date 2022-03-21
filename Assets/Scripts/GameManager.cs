@@ -1,25 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.InputSystem; 
+using System;
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
     [SerializeField] private PlayerInputManager PM;
     [SerializeField] private GameObject[] ScoreObjects = new GameObject[3];
     [SerializeField] private GameObject[] PowerUps = new GameObject[3];
-    public enum ScoreObjectNames { BOOK, WATER, APPLE };
+    [SerializeField] public bool PlayersReady = false;
+    [SerializeField] private TextMesh tm;
+    [SerializeField] private GameObject RestartScreen;
+    private MeshRenderer Mr;
+    public enum ScoreObjectNames { BOOK =0,APPLE= 1,WATER=2 };
     public enum PowerUpNames { SPEED_BOOST, RESISTANCE, BALL };
-    public int TotalScoreObjects = 0;
-    public int TotalPowerUps = 0;
+    [SerializeField] public int TotalScoreObjects = 0;
+    public static int TotalPowerUps = 0;
     static int MaxScoreObjects = 15;
     static int MaxPowerUps = 5;
     private Vector2[] Spawnlocations = new Vector2[MaxScoreObjects + MaxPowerUps];
     private PlayerInput pi;
-    private GameObject[] PlayerObjects = new GameObject[4];
-    private Player[] PlayerScripts = new Player[4];
-    [SerializeField]private bool PlayersReady = false;
+    public GameObject[] PlayerObjects = new GameObject[4];
+    public Player[] PlayerScripts = new Player[4];
     private bool GameStarted = false;
+    public bool Restart = false;
     //gets the players that are currently in game and assigns them player numbers
     // to be used later have UI elements show which player is which
     void GetPlayers()
@@ -30,6 +36,7 @@ public class GameManager : MonoBehaviour
         {
             pi = PlayerInput.GetPlayerByIndex(i);
             pi.name = "Player" + (i + 1);
+            pi.GetComponentInChildren<TextMesh>().text = "Player" +(i + 1);
             PlayerScripts[i] = PlayerObjects[i].GetComponent<Player>();
         }
     }
@@ -37,26 +44,28 @@ public class GameManager : MonoBehaviour
 
 
     IEnumerator SpawnScoreObjects()
+    {
+        while (true)
         {
-            while (TotalScoreObjects < MaxScoreObjects)
+            if (TotalScoreObjects < MaxScoreObjects)
             {
-                GameObject ObjToSpawn;
-                int tmp = Random.Range(0, 99);
+                GameObject ObjToSpawn = null;
+                int tmp = UnityEngine.Random.Range(0, 99);
                 if (tmp <= 25)
+                {
+                    ObjToSpawn = ScoreObjects[(int)ScoreObjectNames.APPLE];
+                }
+                else if (tmp > 25 && tmp <= 79)
                 {
                     ObjToSpawn = ScoreObjects[(int)ScoreObjectNames.BOOK];
                 }
-                else if (tmp > 25 && tmp <= 75)
-                {
-                    ObjToSpawn = ScoreObjects[((int)ScoreObjectNames.APPLE)];
-                }
-                else
+                else if (tmp > 80)
                 {
                     ObjToSpawn = ScoreObjects[(int)ScoreObjectNames.WATER];
                 }
 
 
-                Vector2 LocationTospawn = new Vector2(Random.Range(-16.6f, 17.6f), Random.Range(-11.5f, 11.6f));
+                Vector2 LocationTospawn = new Vector2(UnityEngine.Random.Range(-16.6f, 17.6f), UnityEngine.Random.Range(-11.5f, 11.6f));
                 for (int i = 0; i < Spawnlocations.Length; ++i)
                 {
                     if (LocationTospawn != Spawnlocations[i])
@@ -71,16 +80,17 @@ public class GameManager : MonoBehaviour
                 }
                 yield return new WaitForSeconds(3f);
             }
+            else yield return new WaitForSeconds(3f);             
         }
-
+    }
     IEnumerator SpawnPowerUps()
+    {            
+        while (true)
         {
-            yield return new WaitForSeconds(10f);
-            while (TotalPowerUps < MaxPowerUps)
+            if (TotalPowerUps < MaxPowerUps)
             {
-
                 GameObject PowerUpToSpawn;
-                int tmp = Random.Range(0, 99);
+                int tmp = UnityEngine.Random.Range(0, 99);
                 if (tmp <= 25)
                 {
                     PowerUpToSpawn = PowerUps[(int)PowerUpNames.BALL];
@@ -93,7 +103,7 @@ public class GameManager : MonoBehaviour
                 {
                     PowerUpToSpawn = PowerUps[(int)PowerUpNames.RESISTANCE];
                 }
-                Vector2 LocationTospawn = new Vector2(Random.Range(-16.6f, 17.6f), Random.Range(-11.5f, 11.6f));
+                Vector2 LocationTospawn = new Vector2(UnityEngine.Random.Range(-16.6f, 17.6f), UnityEngine.Random.Range(-11.5f, 11.6f));
                 for (int i = 0; i < Spawnlocations.Length; ++i)
                 {
                     if (LocationTospawn != Spawnlocations[i])
@@ -104,16 +114,38 @@ public class GameManager : MonoBehaviour
                         break;
                     }
                     else continue;
-
                 }
-                break;
+                yield return new WaitForSeconds(10f);
             }
-            yield return new WaitForSeconds(15f);
+            else yield return new WaitForSeconds(10f);             
         }
-    IEnumerator GlobalTimer()
+    }
+    IEnumerator GlobalTimer(int time)
+    {
+        while (time > 0)
         {
-            yield return new WaitForSeconds(1f);
+            time--;
+            TimeSpan timespan =TimeSpan.FromSeconds(time);
+            string timestr = timespan.ToString("mm\\:ss");
+            tm.text = "Time remaining: " + timestr;
+            yield return new WaitForSeconds(1);
         }
+        if(time == 0)
+        {
+            
+            tm.text = "";
+            for(int i = 0;i< PlayerInput.all.Count; ++i)
+            {
+                tm.text += PlayerObjects[i].name+":"+PlayerScripts[i].score+"\n";
+                
+            }
+            
+            tm.text += "\nWinner is: "+DetermineWinner(PlayerScripts);
+            StopAllCoroutines();
+            RestartScreen.SetActive(true);
+            Restart = true;
+        }
+    }
 
     public void RemoveScoreObj(GameObject obj)
     {
@@ -137,23 +169,22 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    void Start()
+    private void Awake()
     {
-        
+        Mr = gameObject.GetComponent<MeshRenderer>();
+        Mr.sortingLayerName = "UI";
+        Mr.sortingOrder = 0;
        
-        
-
+        RestartScreen.SetActive(false);
     }
     void Update()
     {
         GetPlayers();
         switch (PlayerInput.all.Count)
         {
-            case 0:
-               
+            case 0:              
                 break;
-            case 1:
-                Debug.LogError("Not enough players to continue");
+            case 1:       
                 break;
             case 2:
                 if (PlayerScripts[0].PlayerReady == true && PlayerScripts[1].PlayerReady == true)
@@ -186,10 +217,31 @@ public class GameManager : MonoBehaviour
             PM.DisableJoining();
             StartCoroutine(SpawnScoreObjects());
             StartCoroutine(SpawnPowerUps());
+            StartCoroutine(GlobalTimer(180));
             GameStarted = true;
         }
     }
+    string DetermineWinner(Player[] players)
+    {
+        string winner = "";
+        winner = players[0].name;
+        for(int i = 0; i < PlayerInput.all.Count; i++)
+        {
+            if (players[i].score > players[0].score)
+            {
+                winner = players[i].name;
+            }
 
+        }
+        if(winner == players[0].name)
+        {
+            if(players[0].score == 0)
+            {
+                winner = "No one! There are no ties!";
+            }
+        }
+        return winner;
+    }
 }
 
 

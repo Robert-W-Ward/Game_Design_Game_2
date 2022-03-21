@@ -15,9 +15,57 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 116254917627619607}
+    - target: {fileID: 963339452934335731, guid: b6d0cb40ac242124c90edb391daef5c3, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 963339452934335731, guid: b6d0cb40ac242124c90edb391daef5c3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_ActionId
+      value: 296a94b6-8314-4287-98ef-1a1df43c699e
+      objectReference: {fileID: 0}
+    - target: {fileID: 963339452934335731, guid: b6d0cb40ac242124c90edb391daef5c3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_ActionName
+      value: Player/Aim[/XInputControllerWindows/leftStick,/XInputControllerWindows1/leftStick]
+      objectReference: {fileID: 0}
+    - target: {fileID: 4249932570168281215, guid: b6d0cb40ac242124c90edb391daef5c3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4249932570168281215, guid: b6d0cb40ac242124c90edb391daef5c3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4249932570168281215, guid: b6d0cb40ac242124c90edb391daef5c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4249932570168281215, guid: b6d0cb40ac242124c90edb391daef5c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5806508200918158821, guid: b6d0cb40ac242124c90edb391daef5c3, type: 3}
       propertyPath: m_Name
       value: Pete
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861608197282383533, guid: b6d0cb40ac242124c90edb391daef5c3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861608197282383533, guid: b6d0cb40ac242124c90edb391daef5c3, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266993694138808559, guid: b6d0cb40ac242124c90edb391daef5c3, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266993694138808559, guid: b6d0cb40ac242124c90edb391daef5c3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266993694138808559, guid: b6d0cb40ac242124c90edb391daef5c3, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -495272947
       objectReference: {fileID: 0}
     - target: {fileID: 8550376175132475114, guid: b6d0cb40ac242124c90edb391daef5c3, type: 3}
       propertyPath: m_RootOrder

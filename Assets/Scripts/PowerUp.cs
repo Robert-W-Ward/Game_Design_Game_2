@@ -7,11 +7,13 @@ public class PowerUp : MonoBehaviour
     float timeremaining = 5;
     Player p;
     [SerializeField] public string PowerUpName;
-    [SerializeField] private GameManager gamemanger;
+    private GameManager gamemanger;
+    private Animator animator;
     // Start is called before the first frame update
     private void Awake()
     {
        gamemanger = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+       animator = gameObject.GetComponent<Animator>();
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -20,18 +22,25 @@ public class PowerUp : MonoBehaviour
         {
 
             if (timeremaining > 0)
-            {
-                Debug.Log("Collecting" + this.gameObject.name + " Time Remaining:" + timeremaining);
-
+            {               
                 timeremaining -= Time.deltaTime;
+                animator.speed = (2 / timeremaining);
             }
             else
             {
-                Debug.Log("Collected" + this.gameObject.name);
-                if(p.invenidx != p.GetPlayerPowerUps().Length)
+               
+                if(p.PlayerPowerUpCount != p.GetPlayerPowerUps().Length)
                 {
-                    p.GetPlayerPowerUps()[p.invenidx] = this.PowerUpName;
-                    p.invenidx++;
+                    var tmp = p.GetPlayerPowerUps();
+                    for (int i = 0; i < tmp.Length; i++)
+                    {
+                        if (tmp[i] == null||tmp[i]=="")
+                        {
+                            tmp[i] = this.PowerUpName;
+                            break;
+                        }
+                    }
+                    p.PlayerPowerUpCount++;
                     gamemanger.RemovePowerUp(this.gameObject);
                     Destroy(this.gameObject);
                 }
@@ -46,7 +55,8 @@ public class PowerUp : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
 
-            timeremaining = 5;
+            timeremaining = 4;
+            animator.speed = 1;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -54,14 +64,21 @@ public class PowerUp : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             p = collision.gameObject.GetComponent<Player>();
-            if (p.character == "Jeff")
+            switch (p.collectSpd)
             {
-                timeremaining = 3;
-            }
-            else
-            {
-                timeremaining = 5;
+                case 1:
+                    timeremaining = 4;
+                    break;
+                case 2:
+                    timeremaining = 2;
+                    break;
+                case 3:
+                    timeremaining = 1;
+                    break;
+
+
             }
         }
     }
+    
 }

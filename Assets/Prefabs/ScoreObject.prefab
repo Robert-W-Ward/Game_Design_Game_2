@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6960262492167781236}
   - component: {fileID: -3225901355370289081}
   - component: {fileID: 2401234690775064200}
+  - component: {fileID: 1334510399}
   m_Layer: 7
   m_Name: ScoreObject
   m_TagString: Untagged
@@ -46,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06120e4997f31b946b53e2331454cfc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamemanager: {fileID: 6619036886140752361, guid: f4701464fc3c341418df0a07eb6444f1, type: 3}
+  ScoreObjName: 
 --- !u!58 &6960262492167781236
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -135,3 +136,22 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!95 &1334510399
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4179904356790770844}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e318b27c61df1a4da40cc3a08a94649, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
